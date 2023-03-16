@@ -1,4 +1,5 @@
-# Question 1
+# Practical 1
+## Question
 
 A Composite Magic number is a positive integer which is composite as well as a magic number.
 
@@ -30,3 +31,17 @@ Accept two positive integers m and n, where m is less than n as user input. Disp
 <br/> **INPUT:** m = 120
 <br/> n = 97
 <br/> **OUTPUT:** INVALID INPUT
+
+****
+## Variable Description
+
+****
+## Algorithm
+
+****
+## Outputs
+
+****
+## Output Tracing
+
+****
