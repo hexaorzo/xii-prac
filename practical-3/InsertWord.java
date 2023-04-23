@@ -4,7 +4,7 @@ public class InsertWord
     public static void main(String args[]) throws IOException
     {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("ENTER A SENTENCE:\n");
+        System.out.println("ENTER A SENTENCE:");
         String s = br.readLine().toUpperCase();
         if(".?!".indexOf(s.charAt(s.length()-1))!=-1)
         {
