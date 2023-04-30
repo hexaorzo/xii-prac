@@ -13,7 +13,6 @@ public class MatrixMirror
             int[][] a = new int[M][N];
             System.out.println("Enter the elements of the matrix:");
             for(int i=0; i<M; i++)
-            {
                 for(int j=0; j<N; j++)
                 {
                     if (!sc.hasNextInt())
@@ -23,39 +22,28 @@ public class MatrixMirror
                     }
                     a[i][j] = sc.nextInt();
                 }
-            }
             System.out.println("ORIGINAL MATRIX");
             for(int i=0; i<M; i++)
             {
                 for(int j=0; j<N; j++)
-                {
                     System.out.print(a[i][j] + "\t");
-                }
                 System.out.println();
             }
             int[][] mir = new int[M][N];
             for(int i=0; i<M; i++)
-            {
                 for(int j=0; j<N; j++)
-                {
                     mir[i][j] = a[i][N-j-1];
-                }
-            }
             System.out.println("MIRROR MATRIX");
             for(int i=0; i<M; i++)
             {
                 for(int j=0; j<N; j++)
-                {
                     System.out.print(mir[i][j] + "\t");
-                }
                 System.out.println();
             }
             int sum = a[0][0] + a[0][N-1] + a[M-1][0] + a[M-1][N-1];
             System.out.println("SUM OF THE CORNER ELEMENTS = " + sum);
         }
         else
-        {
             System.out.println("INVALID INPUT");
-        }
     }
 }
