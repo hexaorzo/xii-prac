@@ -59,7 +59,7 @@ public class ProjectSubmission
         i=(i+89)%7;
         System.out.println("PROJECT SUBMISSION DATE: "+d+"/"+m+"/"+y);
         System.out.println("DAY OF THE WEEK: "+days[i]);
-        if(days[i].equals("SUNDAY"))
+        if(i==0)
         {
             d++;
             if(d>daysInMonth[m-1])
