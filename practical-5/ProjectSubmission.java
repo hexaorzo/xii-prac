@@ -6,7 +6,7 @@ public class ProjectSubmission
         int d = 0, m = 0, y = 0;
         String days[] = {"SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"};
         String months[] = {"JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"};
-        String daysInMonth[] = {"31","28","31","30","31","30","31","31","30","31","30","31"};
+        int daysInMonth[] = {31,28,31,30,31,30,31,31,30,31,30,31};
         Scanner sc = new Scanner(System.in);
         System.out.print("ENTER PROJECT DATE: ");
         String date = sc.nextLine().toUpperCase();
@@ -24,10 +24,10 @@ public class ProjectSubmission
         System.out.print("DAY OF THE WEEK: ");
         String day = sc.nextLine().toUpperCase();
         if(m==2 && y%4==0 && y%100!=0 || y%400==0)
-            daysInMonth[1] = "29";
+            daysInMonth[1] = 29;
         try
         {
-            if(d>Integer.parseInt(daysInMonth[m-1]))
+            if(d>daysInMonth[m-1])
             {
                 System.out.println("INVALID DATE");
                 System.exit(0);
@@ -42,10 +42,10 @@ public class ProjectSubmission
         while(true)
         {
             if (m==2 && y%4==0 && y%100!=0 || y%400==0)
-                daysInMonth[1] = "29";
-            if(d<=Integer.parseInt(daysInMonth[m-1]))
+                daysInMonth[1] = 29;
+            if(d<=daysInMonth[m-1])
                 break;
-            d -= Integer.parseInt(daysInMonth[m-1]);
+            d -= daysInMonth[m-1];
             m++;
             if(m>12)
             {
@@ -64,7 +64,7 @@ public class ProjectSubmission
         if(days[i].equals("SUNDAY"))
         {
             d++;
-            if(d>Integer.parseInt(daysInMonth[m-1]))
+            if(d>daysInMonth[m-1])
             {
                 d = 1;
                 m++;
