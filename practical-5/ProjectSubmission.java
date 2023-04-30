@@ -22,7 +22,7 @@ public class ProjectSubmission
             System.exit(0);
         }
         System.out.print("DAY OF THE WEEK: ");
-        String day = sc.nextLine().toUpperCase();
+        String day = sc.next().toUpperCase();
         if(m==2 && y%4==0 && y%100!=0 || y%400==0)
             daysInMonth[1] = 29;
         try
