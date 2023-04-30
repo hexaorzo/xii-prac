@@ -56,9 +56,7 @@ public class ProjectSubmission
         int i = 0;
         while(!day.equals(days[i]))
             i++;
-        i+=89;
-        while(i>=7)
-            i-=7;
+        i=(i+89)%7;
         System.out.println("PROJECT SUBMISSION DATE: "+d+"/"+m+"/"+y);
         System.out.println("DAY OF THE WEEK: "+days[i]);
         if(days[i].equals("SUNDAY"))
