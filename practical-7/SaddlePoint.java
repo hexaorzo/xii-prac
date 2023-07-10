@@ -36,8 +36,12 @@ public class SaddlePoint
                 {
                     max = A[0][j];
                     for(int k=0;k<N;k++)
+                    {
                         if(A[k][j]>max)
                             max = A[k][j];
+                        if(A[k][j]<min)
+                            min = A[k][j];
+                    }
                     if(max==min)
                     {
                         System.out.println("SADDLE POINT = "+max);
