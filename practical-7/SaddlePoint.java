@@ -15,7 +15,14 @@ public class SaddlePoint
         System.out.println("MATRIX A[][] :");
         for(int i=0;i<N;i++)
             for(int j=0;j<N;j++)
+            {
                 A[i][j] = sc.nextInt();
+                if(A[i][j]<0)
+                {
+                    System.out.println("Elements must be positive");
+                    System.exit(0);
+                }
+            }
         System.out.println("\nMATRIX A[][] :");
         for(int i=0;i<N;i++)
         {
