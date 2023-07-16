@@ -20,15 +20,17 @@ public class AmountWords
         String[] tens = {"","","TWENTY","THIRTY","FOURTY","FIFTY","SIXTY","SEVENTY","EIGHTY","NINTY"};
         String[] teens = {"TEN","ELEVEN","TWELVE","THIRTEEN","FOURTEEN","FIFTEEN","SIXTEEN","SEVENTEEN","EIGHTEEN","NINETEEN"};
         String[] places = {"","THOUSAND","LAKH","CRORE"};
-        String[] words = new String[4];
+        // convert r to words indian naming system
+        // 123456789 = "TWELVE CRORE THIRTY FOUR LAKH FIFTY SIX THOUSAND SEVEN HUNDRED EIGHTY NINE"
+        String[] words = new String[10];
         int i=0;
         while(r>0)
         {
-            int d = r%1000;
-            r/=1000;
-            if(d>99)
+            int d = r%100;
+            r/=100;
+            if(d>99&&d<1000)
             {
-                words[i] = ones[d/100]+" HUNDRED ";
+                words[i] += ones[d/100]+" HUNDRED ";
                 d%=100;
             }
             if(d>9&&d<20)
@@ -43,10 +45,14 @@ public class AmountWords
             }
             if(d>0)
                 words[i] += ones[d]+" ";
-            if(i>0&&words[i].length()>0)
+            if(words[i].length()>0)
                 words[i] += places[i]+" ";
             i++;
         }
+
+
+
+
         String ans = "";
         for(int j=i-1;j>=0;j--)
             ans += words[j];

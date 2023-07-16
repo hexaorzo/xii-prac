@@ -8,3 +8,5 @@ A git repository for class-XII ISC practicals
 5. [Project Submission Date](/practical-5/) (String/Date Program)
 6. [Vowel Words](/practical-6/) (String Program)
 7. [Saddle Point](/practical-7/) (Matrix Program)
+8. 
+9. [Diagonal Oscilate](/practical-9/) (Matrix Program)
