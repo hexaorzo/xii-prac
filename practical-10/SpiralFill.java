@@ -8,7 +8,7 @@ public class SpiralFill
         int N = sc.nextInt();
         if(N>10||N<2)
         {
-            System.out.println("Infid fue of N");
+            System.out.println("Invalid value of N");
             System.exit(0);
         }
         int[][] A = new int[N][N];
