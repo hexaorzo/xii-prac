@@ -54,7 +54,6 @@ public class AmountWords
                 n = Integer.parseInt(r.substring(i*2,i*2+1));
             else
                 n = Integer.parseInt(r.substring(i*2-1));
-            
             if(n!=0)
                 rs+=ob.word(n)+" "+place[i]+" ";
         }
