@@ -58,6 +58,8 @@ public class AmountWords
             if(n!=0)
                 rs+=ob.word(n)+" "+place[i]+" ";
         }
+        if(rs.trim().length()==0)
+            rc="ZERO";
         System.out.println("Amount = "+rc+"."+p.substring(0,2));
         System.out.println("RUPEES. "+rs.trim()+" AND "+ps+" PAISE ONLY");
     }
