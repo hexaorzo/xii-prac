@@ -29,6 +29,11 @@ public class AmountWords
             i++;
         }
         rc=r; i++;
+        if(rc.charAt(0)=='-'|| rc.length()>9)
+        {
+            System.out.println("Amount either negative or more than 9 digits!! Aborting!!");
+            System.exit(0);
+        }
         while(i<amt.length())
         {
             p+=amt.charAt(i);
