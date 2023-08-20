@@ -8,6 +8,11 @@ public class Anagram
         String word = sc.next().toUpperCase();
         System.out.println("ANAGRAMS OF " + word + " ARE : ");
         int n = word.length();
+        if(n>7)
+        {
+            System.out.println("WORD SHOULD CONTAIN MAX 7 ALPHABETS");
+            System.exit(0);
+        }
         char[] la = new char[n]; int t=1; char temp;
         for(int i = 0; i < n; i++)
             la[i] = word.charAt(i);
