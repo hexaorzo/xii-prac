@@ -1,11 +1,13 @@
 import java.util.Scanner;
 public class Anagram 
 {
-    static void anagram(String w, String a)
+    int t=0;
+    void anagram(String w, String a)
     {
         if(w.length() == 0)
         {
             System.out.print(a + " ");
+            t++;
             return;
         }
         for(int i=0; i<w.length(); i++)
@@ -19,11 +21,13 @@ public class Anagram
     }
     public static void main(String[] args)
     {
+        Anagram ob = new Anagram();
         Scanner sc = new Scanner(System.in);
         System.out.print("ENTER A WORD : ");
         String word = sc.next().toUpperCase();
         int n = word.length();
         System.out.println("ANAGRAMS OF " + word + " ARE : ");
-        anagram(word, "");
+        ob.anagram(word, "");
+        System.out.println("\nTOTAL ANAGRAMS : " + ob.t);
     }
 }
