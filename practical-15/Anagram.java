@@ -6,50 +6,45 @@ public class Anagram
         Scanner sc = new Scanner(System.in);
         System.out.print("ENTER A WORD : ");
         String word = sc.next().toUpperCase();
-        System.out.println("ANAGRAMS OF " + word + " ARE : ");
         int n = word.length();
-        if(n>7)
+        if(n>9)
         {
-            System.out.println("WORD SHOULD CONTAIN MAX 7 ALPHABETS");
+            System.out.println("WORD SHOULD CONTAIN MAX 9 ALPHABETS");
             System.exit(0);
         }
-        char[] la = new char[n]; int t=1; char temp;
-        for(int i = 0; i < n; i++)
-            la[i] = word.charAt(i);
-        for(int i=1;i<=n;i++)
-            t*=i;
-        for(int i=0;i<n;i++)
-            for(int j=0;j<n-i-1;j++)
-                if(la[j]>la[j+1])
-                {
-                    temp=la[j];
-                    la[j]=la[j+1];
-                    la[j+1]=temp;
-                }
-        System.out.print(la);
-        for (int i = 1; i < t; i++) 
+        char[] la = new char[n+1]; 
+        int t=0, n1 =0, n2 = 0;
+        for(int i=1; i<=n; i++)
         {
-            int j = n - 1;
-            while (la[j - 1] >= la[j]) 
-                j--;
-            int k = n;
-            while (la[j - 1] >= la[k - 1]) 
-                k--;
-            temp = la[j - 1];
-            la[j - 1] = la[k - 1];
-            la[k - 1] = temp;
-            j++;
-            k = n;
-            while (j < k) 
+            la[i] = word.charAt(i-1);
+            n1=n1*10+i;
+            n2=n2*10+(n-i+1);
+        }
+        System.out.println("ANAGRAMS OF " + word + " ARE : ");
+        for(int i=n1; i<=n2; i++)
+        {
+            boolean f=true;
+            String num = Integer.toString(i);
+            for(int j=1; j<=n; j++)
             {
-                temp = la[j - 1];
-                la[j - 1] = la[k - 1];
-                la[k - 1] = temp;
-                j++;
-                k--;
+                if(num.indexOf(Integer.toString(j))==-1)
+                {
+                    f=false;
+                    break;
+                }
+                if(!(num.indexOf(Integer.toString(j))==num.lastIndexOf(Integer.toString(j))))
+                {
+                    f=false;
+                    break;
+                }
             }
-            System.out.print("  ");
-            System.out.print(la);
+            if(f)
+            {
+                for(int k=0; k<n;k++)
+                    System.out.print(la[(int)(num.charAt(k)-48)]);
+                System.out.print(" ");
+                t++;
+            }
         }
         System.out.println("\nTOTAL ANAGRAMS : " + t);
     }
