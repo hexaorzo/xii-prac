@@ -25,7 +25,6 @@ public class Anagram
         Scanner sc = new Scanner(System.in);
         System.out.print("ENTER A WORD : ");
         String word = sc.next().toUpperCase();
-        int n = word.length();
         System.out.println("ANAGRAMS OF " + word + " ARE : ");
         ob.anagram(word, "");
         System.out.println("\nTOTAL ANAGRAMS : " + ob.t);
