@@ -34,23 +34,22 @@ public class Postfix
                 j -= 2;
                 char c = sa[i].charAt(0);
                 if (c=='+')
-                    sa[i]="+";
+                    ans[j] = a + b;
                 else if (c=='-')
-                    sa[i]="-";
+                    ans[j] = a - b;
                 else if (c=='*')
-                    sa[i]="*";
+                    ans[j] = a * b;
                 else if (c=='/')
-                    sa[i]="/";
+                    ans[j] = a / b;
                 else if (c=='%')
-                    sa[i]="%";
+                    ans[j] = a % b;
                 else if (c=='^')
-                    sa[i]="^";
+                    ans[j] = (int)Math.pow(a, b);
                 else
                 {
                     System.out.println("Invalid Operator");
                     System.exit(0);
                 }
-                ans[j+1]=0;
             }
             j++;
         }
