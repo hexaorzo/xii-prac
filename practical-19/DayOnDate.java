@@ -8,8 +8,6 @@ public class DayOnDate
         String[] da = {"SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"};
         System.out.print("Date : ");
         String s = sc.nextLine();
-        int l = s.length();
-        String[] sa = new String[l];
         int d = 0, m = 0, y = 0;
         try
         {
@@ -31,6 +29,15 @@ public class DayOnDate
         }
         System.out.print("Day on 1st January: ");
         String day = sc.next().toUpperCase();
+        boolean f = false;
+        for(int i=0;i<7;i++)
+            if(da[i].equals(day))
+                f = true;
+        if(!f)
+        {
+            System.out.println("Invalid Day");
+            System.exit(0);
+        }
         int i = 0;
         for(i=0;i<7;i++)
             if(da[i].equals(day))
