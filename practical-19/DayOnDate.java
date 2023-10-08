@@ -30,7 +30,8 @@ public class DayOnDate
         System.out.print("Day on 1st January: ");
         String day = sc.next().toUpperCase();
         boolean f = false;
-        for(int i=0;i<7;i++)
+        int i = 0;
+        for(i=0;i<7;i++)
             if(da[i].equals(day))
                 f = true;
         if(!f)
@@ -38,10 +39,6 @@ public class DayOnDate
             System.out.println("Invalid Day");
             System.exit(0);
         }
-        int i = 0;
-        for(i=0;i<7;i++)
-            if(da[i].equals(day))
-                break;
         for(int j=1;j<m;j++)
             i=(i+ma[j-1])%7;
         i=(i+d-1)%7;
