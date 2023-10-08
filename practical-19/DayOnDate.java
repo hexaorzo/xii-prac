@@ -33,15 +33,18 @@ public class DayOnDate
         int i = 0;
         for(i=0;i<7;i++)
             if(da[i].equals(day))
+            {
                 f = true;
+                break;
+            }
         if(!f)
         {
             System.out.println("Invalid Day");
             System.exit(0);
         }
         for(int j=1;j<m;j++)
-            i=(i+ma[j-1])%7;
-        i=(i+d-1)%7;
+            i = (i+ma[j-1])%7;
+        i = (i+d-1)%7;
         System.out.println("Day on "+s+" : "+da[i]);
     }
 }
