@@ -6,9 +6,9 @@ public class DiagonalOscillate
         Scanner sc = new Scanner(System.in);
         System.out.print("n = ");
         int n = sc.nextInt();
-        if (n < 3)
+        if(n<3)
         {
-            System.out.println("n should be greater than or equal to 3");
+            System.out.println("n should not be less than 3");
             System.exit(0);
         }
         int[][] arr = new int[n][n];
