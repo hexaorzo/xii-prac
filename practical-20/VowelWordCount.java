@@ -11,13 +11,10 @@ public class VowelWordCount
         for (i = 0; i < s.length(); i++)
         {
             if (".!?".indexOf(s.charAt(i)) != -1)
-            {
                 j++;
-                continue;
-            }
-            if ("AEIOU".indexOf(s.charAt(i)) != -1)
+            else if ("AEIOU".indexOf(s.charAt(i)) != -1)
                 a[j][0]++;
-            if (s.charAt(i) == ' ')
+            else if (s.charAt(i) == ' ')
                 a[j][1]++;
         }
         System.out.println("\nSentence\tNo. of vowels\tNo. of words");
