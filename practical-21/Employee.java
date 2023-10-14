@@ -85,17 +85,29 @@ class Employee extends Salary
             {
                 System.out.print("Enter Employee Number: ");
                 String en = sc.next();
+                boolean f=false;
                 for (int i = 0; i < n; i++)
                     if (e[i].eno.equals(en))
+                    {
                         e[i].print_employee();
+                        f=true;
+                    }
+                if (!f)
+                    System.out.println("Employee not found!");
             }
             else if (c == '2')
             {
                 System.out.print("Enter Employee Number: ");
                 String en = sc.next();
+                boolean f=false;
                 for (int i = 0; i < n; i++)
                     if (e[i].eno.equals(en))
+                    {
                         e[i].print_payslip();
+                        f=true;
+                    }
+                if (!f)
+                    System.out.println("Employee not found!");
             }
             else if (c == '3')
                 for (int i = 0; i < n; i++)
