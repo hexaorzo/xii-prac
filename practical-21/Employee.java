@@ -46,22 +46,22 @@ class Employee extends Salary
     void print_employee()
     {
         System.out.println("\nEmployee Number: " + eno);
-        System.out.println("Employee Name: " + ename);
-        System.out.println("Employee Grade: " + grade);
-        System.out.println("Employee Post: " + post);
+        System.out.println("Employee Name:\t" + ename);
+        System.out.println("Employee Grade:\t" + grade);
+        System.out.println("Employee Post:\t" + post);
     }
     void print_payslip()
     {
-        System.out.println("\nEmployee Number: " + eno);
-        System.out.println("Employee Name: " + ename);
-        System.out.println("Basic Salary: Rs. " + bs);
-        System.out.println("Dearness Allowance: Rs. " + da);
-        System.out.println("Travelling Allowance: Rs. " + ta);
-        System.out.println("House Rent Allowance: Rs. " + hra);
-        System.out.println("Provident Fund: Rs. " + pf);
-        System.out.println("Income Tax: Rs. " + it);
-        System.out.println("Gross Salary: Rs." + gross_salary());
-        System.out.println("Net Salary: Rs. " + net_salary());
+        System.out.println("\nEmployee Number:\t" + eno);
+        System.out.println("Employee Name:\t\t" + ename);
+        System.out.println("Basic Salary:\t\tRs. " + bs);
+        System.out.println("Dearness Allowance:\tRs. " + da);
+        System.out.println("Travelling Allowance:\tRs. " + ta);
+        System.out.println("House Rent Allowance:\tRs. " + hra);
+        System.out.println("Provident Fund:\t\tRs. " + pf);
+        System.out.println("Income Tax:\t\tRs. " + it);
+        System.out.println("Gross Salary:\t\tRs." + gross_salary());
+        System.out.println("Net Salary:\t\tRs. " + net_salary());
     }
     public static void main(String[] args)
     {
