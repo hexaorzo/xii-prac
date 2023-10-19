@@ -9,19 +9,19 @@ public class Time
         int h = Integer.parseInt(t.substring(0, t.indexOf(',')).trim());
         String ms = t.substring(t.indexOf(',') + 1).trim();
         int m = Integer.parseInt(ms);
-        if (ms.length() == 1)
-            ms = "0" + ms;
-        System.out.print(h+":"+ms+"\t\t");
-        String[] n = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", 
-                        "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", 
-                        "Seventeen", "Eighteen", "Nineteen", "Twenty", "Twenty one", "Twenty two",
-                        "Twenty three", "Twenty four", "Twenty five", "Twenty six", "Twenty seven",
-                        "Twenty eight", "Twenty nine"};
         if (h < 0 || h > 12 || m < 0 || m > 59) 
         {
             System.out.println("Incorrect input");
             System.exit(0);
         }
+        if (ms.length() == 1)
+            ms = "0" + ms;
+        System.out.print(h+":"+ms+"\t");
+        String[] n = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", 
+                        "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", 
+                        "Seventeen", "Eighteen", "Nineteen", "Twenty", "Twenty one", "Twenty two",
+                        "Twenty three", "Twenty four", "Twenty five", "Twenty six", "Twenty seven",
+                        "Twenty eight", "Twenty nine"};
         if(m==0)
             System.out.println(n[h-1]+" o' clock");
         else if(m==15)
