@@ -9,7 +9,7 @@ public class Time
         int h = Integer.parseInt(t.substring(0, t.indexOf(',')).trim());
         String ms = t.substring(t.indexOf(',') + 1).trim();
         int m = Integer.parseInt(ms);
-        if (h < 0 || h > 12 || m < 0 || m > 59) 
+        if (h <  1 || h > 12 || m < 0 || m > 59) 
         {
             System.out.println("Incorrect input");
             System.exit(0);
