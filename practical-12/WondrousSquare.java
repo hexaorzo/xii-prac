@@ -17,7 +17,7 @@ public class WondrousSquare
             for( int j=0;j<n;j++)
             {
                 a[i][j]=sc.nextInt();
-                if(a[i][j]<0)
+                if(a[i][j]<0||a[i][j]>(n*n))
                 {
                     System.out.println("Invalid input");
                     System.exit(0);
