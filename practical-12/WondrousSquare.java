@@ -37,7 +37,7 @@ public class WondrousSquare
                 flag=false;
                 break;
             }
-			num++;
+	    num++;
         }
         int tsum=(int) (0.5*n*(Math.pow(n,2)+1));
         int j=0;
