@@ -27,7 +27,7 @@ public class Anagram
             String num = Integer.toString(i);
             for(int j=1; j<=n; j++)
             {
-                if(num.indexOf(Integer.toString(j))==-1)
+                if(num.indexOf(48+j)==-1)
                 {
                     f=false;
                     break;
