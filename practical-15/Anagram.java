@@ -32,7 +32,7 @@ public class Anagram
                     f=false;
                     break;
                 }
-                if(!(num.indexOf(Integer.toString(j))==num.lastIndexOf(Integer.toString(j))))
+                if(!(num.indexOf(48+j)==num.lastIndexOf(48+j)))
                 {
                     f=false;
                     break;
