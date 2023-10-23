@@ -62,9 +62,8 @@ public class WondrousSquare
             System.out.println("NOT A WONDROUS SQUARE");
         System.out.println("PRIME\tROW INDEX\tCOLUMN INDEX");
         int c;
-        int m=(int) Math.pow(n,2);
         a:
-        for(int k=2;k<=m;k++)
+        for(int k=2;k<=(n*n);k++)
         {
             c=0;
             for(int l =1;l<=k;l++)
