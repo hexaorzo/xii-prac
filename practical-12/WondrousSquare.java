@@ -8,7 +8,7 @@ public class WondrousSquare
         int n=sc.nextInt();
         if(n<2||n>10)
         {
-            System.out.print("Invalid input");
+            System.out.println("Invalid input");
             System.exit(0);
         }
         int a[][]=new int[n][n];
