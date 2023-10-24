@@ -52,12 +52,13 @@ class Queue
         System.out.print("Enter size of queue: ");
         int n = sc.nextInt();
         Queue q = new Queue(n);
-        System.out.println("1. Insert an element");
-        System.out.println("2. Delete an element");
-        System.out.println("3. Display the elements");
         while (true)
         {
-            System.out.print("\nEnter choice: ");
+            
+            System.out.println("\n1. Insert an element");
+            System.out.println("2. Delete an element");
+            System.out.println("3. Display the elements");
+            System.out.print("Enter choice: ");
             char c = sc.next().charAt(0);
             if(c=='1')
             {
