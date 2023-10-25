@@ -6,10 +6,16 @@ public class Time
         Scanner sc = new Scanner(System.in);
         System.out.print("Time: ");
         String t = sc.nextLine();
-        int h = Integer.parseInt(t.substring(0, t.indexOf(',')).trim());
-        String ms = t.substring(t.indexOf(',') + 1).trim();
-        int m = Integer.parseInt(ms);
-        if (h <  1 || h > 12 || m < 0 || m > 59) 
+        int h=0, m=0; String ms=""; 
+        try
+        {
+            h = Integer.parseInt(t.substring(0, t.indexOf(',')).trim());
+            ms = t.substring(t.indexOf(',') + 1).trim();
+            m = Integer.parseInt(ms);
+            if (h <  1 || h > 12 || m < 0 || m > 59) 
+                throw new Exception();
+        }
+        catch(Exception e)
         {
             System.out.println("Incorrect input");
             System.exit(0);
