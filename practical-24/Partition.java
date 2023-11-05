@@ -8,7 +8,7 @@ class Partition
         int n = sc.nextInt();
         partition(n, n-1, "");
     }
-    public static void partition(int n, int m, String p) 
+    static void partition(int n, int m, String p) 
     {
         if (n == 0) 
         {
